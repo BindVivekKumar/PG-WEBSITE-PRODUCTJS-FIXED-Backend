@@ -10,12 +10,10 @@ const app = express();
 
 // Middleware
 app.use(express.json());
+
+// CORS: allow frontend URL
 app.use(cors({
-    origin:[
-        "https://pg-website-productjs-fixed.vercel.app"
-    ],
-    credentials: true
-    
+    origin: ["https://pg-website-productjs-fixed.vercel.app"],
 }));
 
 // MongoDB connection
@@ -26,6 +24,7 @@ mongoose.connect(process.env.MONGO_URI)
 // Routes
 app.use("/api/v1", queryRouter);
 
+// Root route
 app.get("/", (req, res) => {
   res.send("Hello! Server is running.");
 });
