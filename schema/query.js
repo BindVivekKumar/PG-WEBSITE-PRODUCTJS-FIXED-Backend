@@ -9,7 +9,7 @@ const querySchema = new mongoose.Schema({
   phone: {
     type: String,
     required: true,
-    match: [/^\+91\s?[0-9]{5}\s?[0-9]{5}$/, "Invalid phone number format"]
+    
   },
   email: {
     type: String,
@@ -24,7 +24,7 @@ const querySchema = new mongoose.Schema({
   },
   address: {
     type: String,
-    required: true
+    required: false
   },
   message: {
     type: String,

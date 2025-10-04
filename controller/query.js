@@ -5,7 +5,7 @@ exports.queryController = async (req, res) => {
     const { fullName, phone, email, requirement, address, message } = req.body;
 
     // Validation
-    if (!fullName || !phone || !email || !requirement || !address || !message) {
+    if (!fullName || !phone) {
       return res.status(400).json({
         success: false,
         message: "All fields are required. Please fill them and try again.",
