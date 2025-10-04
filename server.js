@@ -12,7 +12,7 @@ const app = express();
 app.use(express.json());
 app.use(cors({
     origin:[
-        "https://pg-website-productjs-fixed.vercel.app/"
+        "https://pg-website-productjs-fixed.vercel.app"
     ]
 }));
 
