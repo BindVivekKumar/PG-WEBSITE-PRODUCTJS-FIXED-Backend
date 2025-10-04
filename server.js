@@ -13,8 +13,9 @@ app.use(express.json());
 
 // CORS: allow frontend URL
 app.use(cors({
-    origin: ["https://pg-website-productjs-fixed.vercel.app"],
+  origin: ["https://pg-website-productjs-fixed.vercel.app"],
 }));
+
 
 // MongoDB connection
 mongoose.connect(process.env.MONGO_URI)
